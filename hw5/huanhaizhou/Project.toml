@@ -1,0 +1,9 @@
+[deps]
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
+ImageEdgeDetection = "2b14c160-480b-11ea-1b58-656063328ff7"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
+JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+MLDatasets = "eb30cadb-4394-5ae3-aed4-317e484a6458"
+Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
+MosaicViews = "e94cdb99-869f-56ef-bcf0-1ae2bcbe0389"
