@@ -125,14 +125,14 @@ pics = channelview(img)
 pics = [pics[i, :, :] for i in axes(pics, 1)]
 
 
-fourier_compressed = stack(Fourier_compression.(pics; ratio=1e-2); dims=1)
-img = colorview(RGB, fourier_compressed)
+fourier_compressed = stack(Fourier_compression.(pics; ratio=1e-1); dims=1)
+img = colorview(RGBA, fourier_compressed)
 
 svd_compressed = stack(svd_compression.(pics; ratio=1e-3); dims=1)
-img = colorview(RGB, svd_compressed)
+img = colorview(RGBA, svd_compressed)
 
-edge_guided_fourier_compressed = stack(edge_guided_Fourier_compression.(pics; algorithm=ImageEdgeDetection.Canny(spatial_scale=1.2, high=ImageEdgeDetection.Percentile(70), low=ImageEdgeDetection.Percentile(30)), ratio=1e-1); dims=1)
-img = colorview(RGB, edge_guided_fourier_compressed)
+edge_guided_fourier_compressed = stack(edge_guided_Fourier_compression.(pics; algorithm=ImageEdgeDetection.Canny(spatial_scale=1), ratio=1e-1); dims=1)
+img = colorview(RGBA, edge_guided_fourier_compressed)
 
-edge_guided_svd_compressed = stack(edge_guided_svd_compression.(pics; algorithm=ImageEdgeDetection.Canny(spatial_scale=1.2), atol=1e-1); dims=1)
-img = colorview(RGB, edge_guided_svd_compressed)
+edge_guided_svd_compressed = stack(edge_guided_svd_compression.(pics; algorithm=ImageEdgeDetection.Canny(spatial_scale=1), atol=1e-1); dims=1)
+img = colorview(RGBA, edge_guided_svd_compressed)
